@@ -1,0 +1,382 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"max",
+				"maxNum	statement"
+			],
+			[
+				"ret",
+				"returnFun	statement"
+			],
+			[
+				"no",
+				"None	keyword"
+			],
+			[
+				"dist",
+				"distanceList	statement"
+			],
+			[
+				"sort",
+				"sortDistance	function"
+			],
+			[
+				"k",
+				"k	param"
+			],
+			[
+				"vec",
+				"vectorB	param"
+			],
+			[
+				"iter",
+				"iter	iter"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "KNN.py",
+			"settings":
+			{
+				"buffer_size": 936,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "mysort.py",
+			"settings":
+			{
+				"buffer_size": 9,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 375.0,
+		"selected_items":
+		[
+			[
+				"set s p",
+				"Set Syntax: Python"
+			],
+			[
+				"set",
+				"Set Syntax: Python"
+			],
+			[
+				"package c in",
+				"Package Control: Install Package"
+			],
+			[
+				"po",
+				"Package Control: Upgrade/Overwrite All Packages"
+			],
+			[
+				"pac insta",
+				"Package Control: Install Package"
+			],
+			[
+				"pack c i",
+				"Package Control: Install Package"
+			],
+			[
+				"pack c l",
+				"Package Control: List Packages"
+			],
+			[
+				"pa l",
+				"Package Control: Install Package"
+			],
+			[
+				"p",
+				"Permute Lines: Reverse"
+			],
+			[
+				"p c l",
+				"Package Control: List Packages"
+			],
+			[
+				"pac c e",
+				"Package Control: Enable Package"
+			],
+			[
+				"",
+				"Package Control: Disable Package"
+			],
+			[
+				"p c ",
+				"Package Control: Enable Package"
+			],
+			[
+				"package c l",
+				"Package Control: List Packages"
+			],
+			[
+				"packet c",
+				"Package Control: Install Package"
+			],
+			[
+				"packet",
+				"Package Control: Disable Package"
+			],
+			[
+				"pa",
+				"Package Control: Install Package"
+			],
+			[
+				"pac",
+				"Package Control: Upgrade/Overwrite All Packages"
+			],
+			[
+				"ht",
+				"Set Syntax: HTML"
+			],
+			[
+				"brea",
+				"Breakpoints: Clear All"
+			],
+			[
+				"package",
+				"Package Control: List Packages"
+			],
+			[
+				"python",
+				"Set Syntax: Python"
+			],
+			[
+				"pack",
+				"Package Control: List Packages"
+			],
+			[
+				"pach",
+				"Package Control: Add Channel"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 435.0
+	},
+	"console":
+	{
+		"height": 0.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/Users/ca/works/Walleve/MLAlgrithem/KNN/KNN.py",
+		"/Users/ca/works/Walleve/MLAlgrithem/LinearRegression/LinerReg.py",
+		"/Users/ca/works/Walleve/MLAlgrithem/KNN/KNNReadMe",
+		"/Users/ca/Library/Application Support/Sublime Text 3/Packages/User/Preferences.sublime-settings",
+		"/Users/ca/Library/Application Support/Sublime Text 3/Packages/User/Default (OSX).sublime-keymap",
+		"/Users/ca/Library/Application Support/Sublime Text 3/Packages/Default/Default (OSX).sublime-keymap",
+		"/Users/ca/Library/Application Support/Sublime Text 3/Packages/Default/Preferences.sublime-settings",
+		"/Users/ca/works/Walleve/MLAlgrithem/StandardImport.py",
+		"/Users/ca/works/Walleve/MLAlgrithem/untitled",
+		"/Users/ca/works/Walleve/man_document",
+		"/Users/ca/works/Data/Mtime网站8523部\"国内\"电影数据/README-datatang.txt",
+		"/Users/ca/Desktop/ScipyTest.py",
+		"/Users/ca/Desktop/matplotTest.py",
+		"/Users/ca/works/vtk/VTKBuild/CMakeCache.txt",
+		"/Users/ca/works/sciEnvForPy2/Source/ETS/ets.py",
+		"/Users/ca/works/sciEnv/Source/ETS/ets.py"
+	],
+	"find":
+	{
+		"height": 35.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"shift+l",
+			"CMAKE_OSX_SYSROOT:STRING",
+			"CMAKE_INSTALL_PREFIX:PATH"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 1,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "KNN.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 936,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								239,
+								239
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 2.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "mysort.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 9,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								9,
+								9
+							]
+						],
+						"settings":
+						{
+							"auto_name": "",
+							"syntax": "Packages/Python/Python.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 23.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 100.0
+	},
+	"project": "KNN.sublime-project",
+	"replace":
+	{
+		"height": 42.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+			[
+				"",
+				"KNN.py"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"selected_items":
+		[
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 150.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
