@@ -1,25 +1,21 @@
 #logistic
 from ..StandardImport import *
 
+def  LogisticCostFun(funOut,yOut):
+	costlist = yOut*np.log(funOut)+(1-yOut)*np.log(1-funOut)
+	return costlist.sum()/len(yOut)
 
 class LogisticHyp(hyp.hypothesis):
 	"""docstring for """
-	def __init__(self, featureNum=1):
-		super.__init__(1)
-		self.featureNum = featureNum
-		self.parameters = np.zeros(featureNum)
+	def __init__(self,numhyp,tureThreshold = 0.5,falseThreshold = 0.5):
+		super(LogisticHyp,self).__init__()
+		self.numhyp = numhyp
+		self.tureThreshold = tureThreshold
+		self.falseThreshold = falseThreshold
+	
+	def excution(self,xin): 
+		retVal =  sigmoid(self.numhyp(xin))
+		if retVal>self.tureThreshold:return True
+		else :return False 
 
-		
-
-def funWithPara(paraVector,xin):
-	sigmoid(caculatepoly(paraVector,xin))
-	return
-
-def  squareDValue(a,b):
-	return ((a - b)**2).sum()/len(a))
-
-
-def trainAlgrithom():
-	for returnPara,funOut,disable_Restrain in GD.gradinet_DescentByStep(trainingset,Func,parameters) :
-		print costFunctionWithOut(trainingSet,funOut)
 

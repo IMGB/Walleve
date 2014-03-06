@@ -1,3 +1,0 @@
-#Row  data 
-class RowDataCollection():
-	

@@ -1,42 +1,71 @@
-import numpy as np
-import scipy as sci 
-import matplotlib.pyplot as plt
-import mysort
+from ..StandardImport import *
+from ..LinearRegression import LinearReg as LR
+from ..Trainer import gradDescTrainer as gD
+class KNNParent(hyp.hypothesis):
+	"""docstring for KNN"""
+	def __init__(self, korder=0,baseData = None):
+		super(KNNParent, self).__init__()
+		self.korder= korder
+		self.baseData = baseData
 
-def getDistance(vectorA,vectorB):
-	return ((vectorB-vectorA)**2).sum;
+	@staticmethod
+	def choseKPoint(DataSet,k,xq):
+		aDistance = calDistance(DataSet.x, xq)
+		retInd = np.argsort(aDistance)[:k]
+		return dSet.dataSetPatY(DataSet.x[retInd], DataSet.y[retInd])
 
-def sortDistance(Distancelist,index):
-	least_K_list = [0]*5
+	@staticmethod
+	def funOut(weights,kDataSet,xin):
+		return None
 
-	for dist in dits_s
-		least_K_list.append(dist)
-		least_K_list = sorted(least_K_list)[:5]
-	return least_K_list
+	@staticmethod
+	def cal_Weights(kDataSet):
+		return kDataSet.sqrDistance**(-1)
 
-def getMostCloseFun(DistanceList):
-	mDic = {}
-	for xclose,yclose,distances in DistanceList:
-		if yclose in mDic:
-			mDic[yclose] = 1
-		else:
-			mDic[yclose]++
-	returnFun = None
-	maxNum = 0
-	for tpair in mDic.items():
-		if tpair[1]>maxNum:
-			returnFun = tpair[0] 
-			maxNum =  tpair[1]
-	return returnFun
+	def excution(self,xin,korder = None): #not suppot mutiple vector
+		if not korder:korder = self.korder
+		kDataSet = self.choseKPoint(self.baseData,self.korder,xin)
+		weights = self.cal_Weights(kDataSet) #kDataSet.sqrDistance**(-1)	
+		return self.funOut(weights, kDataSet,xin)
 
 
-def excuteKNN(trainset,xq,k=3):
-	if k<x.ndarray.shape[0]:
-		k=x.ndarray.shape[0]
-	if k<3:	
-		return
-	distanceAndIndexList = sortDistance(getDistance(trainset[:,0], xq)]
+class KNNClassify(KNNParent):
+	@staticmethod
+	def funOut(weights,kDataSet,xin):
+		sortDic = {}
+		[ sortDic[v] = (weights*diffFun(v, kDataSet.y)).sum() for v in kDataSet.patternDic.keys]	
+		return sorted(sortDic)[-1]
 
-	trainAndDistList = np.hstack((trainset[distanceAndIndexList[:,0]] , distanceAndIndexList))
 
-	getMostCloseFun(trainAndDistList);
+class KNNRegress(KNNParent):
+	@staticmethod
+	def funOut(weights,kDataSet,xin):
+		return (weights*kDataSet.y).sum()/weights.sum()
+
+
+class LOESS(KNNParent):
+	def __init__(self, trainFac,hyp,korder=0,baseData = None):
+		super(LOESS, self).__init__()
+		self.trainFac = trainFac
+		self.hyp = hyp
+
+	@staticmethod
+	def funOut(weights,kDataSet,xin):
+		it = self.trainFac(self.hyp,kDataSet)
+		thehyp = it(debug=False)['hyp']
+		return thehyp(xin)
+
+class Linear_gd_LOESS(LOESS):
+	"""docstring for Linear_gd_LOESS"""
+	def __init__(self,korder=0,baseData = None):
+		thehyp = LR.LinearHyp()
+		theFac = gD.gradDesFactory(1000)
+		super(Linear_gd_LOESS, self).__init__(theFac,thehyp,korder,baseData)
+
+	@property
+	def featureNum(self):
+	    return len(self.hyp.parameters)
+	@featureNum.setter
+	def featureNum(self, value):
+	    self.hyp.parameters = np.zeros(value)
+	
