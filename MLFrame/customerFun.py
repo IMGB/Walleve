@@ -8,7 +8,7 @@ def sigmoid(x):
 
 def squareDValue(a,b):
 	retArr = (a-b)**2
-	return retArr.sum(axis=retArr.ndim-1)
+	return retArr.sum(axis=0)
 
 def defaultCostfun(funout,yout):
 	return squareDValue(funout,yout)/len(yout)

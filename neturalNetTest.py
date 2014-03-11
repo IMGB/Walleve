@@ -3,9 +3,9 @@ from MLFrame.NeuralNetwork import NeuralNetwok as neural
 
 '''.......................data support........................'''
 layOne = np.array([[-1,3,7],[-7,2,3],[2.4,-11,-4]])
-layTwo = np.array([[6,-5.0,-1]])
+layTwo = np.array([[6,-5.0,-1],[-1,-3,-5]])
 
-nnet = neural.neuralNet((3,3,1))
+nnet = neural.neuralNet((3,4,2))
 
 nnet.layMatrixs[0] = layOne
 nnet.layMatrixs[1] = layTwo
@@ -13,11 +13,13 @@ nnet.layMatrixs[1] = layTwo
 testx = np.array([1.1,2.2,3.3])
 testvalue =  nnet(testx)
 
+print "testvalue is %s" %testvalue
+raw_input_B = raw_input("raw_input: ")
 
 xset = np.random.rand(200,2)-0.5
 xset = np.hstack((xset,np.ones(len(xset)).reshape(-1,1)))
 
-yset = np.apply_along_axis(lambda x: nnet(x),1,xset).reshape(-1)
+yset = np.apply_along_axis(lambda x: nnet(x),1,xset).reshape
 
 #yset = (xset[:,0]*2-7*xset[:,1]*xset[:,0]-15*xset[:,1]*2+2>0)
 
@@ -37,7 +39,7 @@ raw_input_B = raw_input("raw_input: ")
 dataSet = dSet.ds_2_np(xset, yset)
 nnetFc = neural.backPropagate(1000,stRate=0.01, trainData=dataSet)
 
-trainNet = neural.neuralNet((3,3,1))
+trainNet = neural.neuralNet((3,3,2))
 
 #trainNet.layMatrixs = [np.array([[1,1,1],]),]
 

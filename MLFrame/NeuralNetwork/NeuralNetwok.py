@@ -2,7 +2,6 @@ from ..StandardImport import *
 
 class neuralNet(hyp.hypothesis):
 	"""docstring for neuralNet"""
-
 	def __init__(self,lays):
 		super(neuralNet, self).__init__()
 		self._mve = False
@@ -16,7 +15,7 @@ class neuralNet(hyp.hypothesis):
 	
 	def setShape(self, lays):
 		if len(lays) < 2:
-			raise TypeError("imquire lay number more than 3")
+			raise TypeError("imquire lay number more than 2")
 		else:
 			self.layMatrixs = []
 		for i in range(1,len(lays)):
@@ -36,7 +35,8 @@ class neuralNet(hyp.hypothesis):
 		retUnits = [xin,] 
 		unit_in = xin
 		for i in range(len(self.layMatrixs)):
-			unit_in = sigmoid((self.layMatrixs[i]*unit_in).sum(axis = self.layMatrixs[i].ndim-1))
+			#unit_in = sigmoid((self.layMatrixs[i]*unit_in).sum(axis = self.layMatrixs[i].ndim-1))
+			unit_in = sigmoid((self.layMatrixs[i]*unit_in).sum(axis = 1))
 			retUnits.append(unit_in)
 
 		if retAllUnit:	return retUnits

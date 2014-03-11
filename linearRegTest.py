@@ -1,6 +1,5 @@
 from MLFrame.StandardImport import *
 from MLFrame.LinearRegression import LinearReg as LR
-
 #Linear regression z = 3x**2+4xy+5y**2+7
 
 try:  # do not edit! added by PythonBreakpoints

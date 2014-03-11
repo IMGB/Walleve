@@ -12,36 +12,39 @@ class KNNParent(hyp.hypothesis):
 	def choseKPoint(DataSet,k,xq):
 		aDistance = calDistance(DataSet.x, xq)
 		retInd = np.argsort(aDistance)[:k]
-		return dSet.dataSetPatY(DataSet.x[retInd], DataSet.y[retInd])
+		retData = DataSet[retInd]
+		retData.sqrDistance = aDistance[retInd]
+		return retData
+	
 
 	@staticmethod
-	def funOut(weights,kDataSet,xin):
+	def kernelfun(weights,kDataSet,xin):
 		return None
 
 	@staticmethod
 	def cal_Weights(kDataSet):
-		return kDataSet.sqrDistance**(-1)
+		return 1.0/kDataSet.sqrDistance
 
 	def excution(self,xin,korder = None): #not suppot mutiple vector
 		if not korder:korder = self.korder
+		if self.baseData == None:raise hyp.HypExcutionError("no data for knn")
 		kDataSet = self.choseKPoint(self.baseData,self.korder,xin)
 		weights = self.cal_Weights(kDataSet) #kDataSet.sqrDistance**(-1)	
-		return self.funOut(weights, kDataSet,xin)
-
+		return self.kernelfun(weights, kDataSet,xin)
 
 class KNNClassify(KNNParent):
 	@staticmethod
-	def funOut(weights,kDataSet,xin):
+	def kernelfun(weights,kDataSet,xin):
 		sortDic = {}
-		[ sortDic[v] = (weights*diffFun(v, kDataSet.y)).sum() for v in kDataSet.patternDic.keys]	
+		for v in kDataSet.patternDic:
+			sortDic[v] = (1*(v==kDataSet.y)*weights).sum()
 		return sorted(sortDic)[-1]
 
 
 class KNNRegress(KNNParent):
 	@staticmethod
-	def funOut(weights,kDataSet,xin):
+	def kernelfun(weights,kDataSet,xin):
 		return (weights*kDataSet.y).sum()/weights.sum()
-
 
 class LOESS(KNNParent):
 	def __init__(self, trainFac,hyp,korder=0,baseData = None):
@@ -50,7 +53,7 @@ class LOESS(KNNParent):
 		self.hyp = hyp
 
 	@staticmethod
-	def funOut(weights,kDataSet,xin):
+	def kernelfun(weights,kDataSet,xin):
 		it = self.trainFac(self.hyp,kDataSet)
 		thehyp = it(debug=False)['hyp']
 		return thehyp(xin)
@@ -64,8 +67,7 @@ class Linear_gd_LOESS(LOESS):
 
 	@property
 	def featureNum(self):
-	    return len(self.hyp.parameters)
+		return len(self.hyp.parameters)
 	@featureNum.setter
 	def featureNum(self, value):
-	    self.hyp.parameters = np.zeros(value)
-	
+		self.hyp.parameters = np.zeros(value)

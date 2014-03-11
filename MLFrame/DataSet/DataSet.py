@@ -1,4 +1,6 @@
 import numpy as np
+
+
 class dataSetExp(Exception):
 	pass
 
@@ -136,5 +138,12 @@ class ds_2_np_patter(ds_2_np):
 		else:
 			return None
 
-
 	
+
+
+
+
+
+
+
+
