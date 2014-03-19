@@ -2,12 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b31424fe-a0f3-4965-a3d2-fc8ef77346a3" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/MLFrame/KNN/KNN_RBF.py" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MLFrame/PCA.py" afterPath="$PROJECT_DIR$/MLFrame/PCA.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MLFrame/customerFun.py" afterPath="$PROJECT_DIR$/MLFrame/customerFun.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MLFrame/hypothesis/hypothesis.py" afterPath="$PROJECT_DIR$/MLFrame/hypothesis/hypothesis.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MLFrame/Trainer/train.py" afterPath="$PROJECT_DIR$/MLFrame/Trainer/train.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SVMTest.py" afterPath="$PROJECT_DIR$/SVMTest.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MLFrame/SVM/svm.py" afterPath="$PROJECT_DIR$/MLFrame/SVM/svm.py" />
     </list>
     <ignored path="Walleve.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -39,19 +35,30 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SVMTest.py" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="SVMTest.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/SVMTest.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="39" column="0" selection-start="884" selection-end="884" vertical-scroll-proportion="0.0" vertical-offset="368" max-vertical-offset="750">
+            <state line="52" column="28" selection-start="1394" selection-end="1394" vertical-scroll-proportion="0.7027027" vertical-offset="390" max-vertical-offset="945">
+              <folding>
+                <element signature="e#22#58#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="svm.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/MLFrame/SVM/svm.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="16" column="0" selection-start="452" selection-end="452" vertical-scroll-proportion="0.0" vertical-offset="55" max-vertical-offset="2610">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="svm.py" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/MLFrame/SVM/svm.py">
+      <file leaf-file-name="customerFun.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/MLFrame/customerFun.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="102" column="36" selection-start="3808" selection-end="3808" vertical-scroll-proportion="0.13436124" vertical-offset="1469" max-vertical-offset="2595">
+            <state line="24" column="0" selection-start="465" selection-end="465" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="510">
               <folding />
             </state>
           </provider>
@@ -89,16 +96,16 @@
         <option value="$PROJECT_DIR$/neturalNetTest.py" />
         <option value="$PROJECT_DIR$/MLFrame/customerFun.py" />
         <option value="$PROJECT_DIR$/MLFrame/PCA.py" />
-        <option value="$PROJECT_DIR$/SVMTest.py" />
         <option value="$PROJECT_DIR$/MLFrame/SVM/svm.py" />
+        <option value="$PROJECT_DIR$/SVMTest.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="198" />
+    <option name="x" value="112" />
     <option name="y" value="22" />
-    <option name="width" value="1440" />
-    <option name="height" value="801" />
+    <option name="width" value="1920" />
+    <option name="height" value="981" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -126,6 +133,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -178,17 +186,16 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="options.splitter.main.proportions" value="0.3" />
-    <property name="options.lastSelected" value="preferences.sourceCode.Python" />
     <property name="recentsLimit" value="5" />
+    <property name="options.lastSelected" value="preferences.sourceCode.Python" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="FullScreen" value="false" />
-    <property name="options.searchVisible" value="true" />
     <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
   </component>
   <component name="PyConsoleOptionsProvider">
     <option name="myPythonConsoleState">
@@ -434,15 +441,15 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="198" y="22" width="1440" height="801" extended-state="6" />
+    <frame x="112" y="22" width="1920" height="981" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20763889" sideWeight="0.6827195" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.31728044" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.15572916" sideWeight="0.6580135" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.34198645" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3295711" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -497,16 +504,11 @@
           <line>9</line>
           <option name="timeStamp" value="93" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="python-line">
-          <url>file://$PROJECT_DIR$/MLFrame/SVM/svm.py</url>
-          <line>101</line>
-          <option name="timeStamp" value="133" />
-        </line-breakpoint>
       </breakpoints>
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="134" />
+      <option name="time" value="143" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
@@ -537,18 +539,6 @@
     <entry file="file://$PROJECT_DIR$/KNNTest.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="15" column="26" selection-start="413" selection-end="413" vertical-scroll-proportion="0.3318584" vertical-offset="0" max-vertical-offset="678" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MLFrame/customerFun.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="0" selection-start="200" selection-end="200" vertical-scroll-proportion="0.22123894" vertical-offset="0" max-vertical-offset="678">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/pydevd.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1142" column="0" selection-start="47510" selection-end="47510" vertical-scroll-proportion="0.0" vertical-offset="15972" max-vertical-offset="22080" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/MLFrame/NeuralNetwork/NeuralNetwok.py">
@@ -590,17 +580,33 @@
         <state line="94" column="0" selection-start="3125" selection-end="3125" vertical-scroll-proportion="0.1813602" vertical-offset="1338" max-vertical-offset="12600" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/SVMTest.py">
+    <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/pydevd.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="39" column="0" selection-start="884" selection-end="884" vertical-scroll-proportion="0.0" vertical-offset="368" max-vertical-offset="750">
+        <state line="1531" column="0" selection-start="60412" selection-end="60412" vertical-scroll-proportion="0.0" vertical-offset="21525" max-vertical-offset="22080">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/MLFrame/SVM/svm.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="102" column="36" selection-start="3808" selection-end="3808" vertical-scroll-proportion="0.13436124" vertical-offset="1469" max-vertical-offset="2595">
+        <state line="16" column="0" selection-start="452" selection-end="452" vertical-scroll-proportion="0.0" vertical-offset="55" max-vertical-offset="2610">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MLFrame/customerFun.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="24" column="0" selection-start="465" selection-end="465" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="510">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SVMTest.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="52" column="28" selection-start="1394" selection-end="1394" vertical-scroll-proportion="0.7027027" vertical-offset="390" max-vertical-offset="945">
+          <folding>
+            <element signature="e#22#58#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

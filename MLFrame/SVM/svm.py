@@ -38,7 +38,7 @@ class svm_smo_fc(train.factory):
 		h.support_y = ys
 		it.errs = np.apply_along_axis(lambda xin:h.excution(xin),1, arr=xs).reshape(-1) - ys
 		it.kkt_toler = self.kkt_toler
-		print "errs is %s"%it.errs
+		#print "errs is %s"%it.errs
 		def multiplier_cal(i,j,Ei,Ej):
 			eta = h.kernal(xs[i],xs[i])+h.kernal(xs[j],xs[j])- 2.0*h.kernal(xs[i],xs[j])
 			C = it.slack
@@ -49,7 +49,7 @@ class svm_smo_fc(train.factory):
 				L = max(0,h.multiplier[j]+h.multiplier[i] - C)
 				H = min(C,h.multiplier[j]+h.multiplier[i])
 		 	old_mult_j = h.multiplier[j]
-		 	new_mult_j = h.multiplier[j] + ys[j]*(Ei-Ej)/eta
+		 	new_mult_j =  ys[j]*(Ei-Ej)/eta + old_mult_j
 
 		 	if new_mult_j>H:
 		 		new_mult_j = H
@@ -92,14 +92,12 @@ class svm_smo_fc(train.factory):
     			# 2) yi*f(i) == 1 and 0<alpha< C (on the boundary)  
     			# 3) yi*f(i) <= 1 and alpha == C (between the boundary)  
     			## violate KKT condition  
-    			# because y[i]*E_i = y[i]*f(i) - y[i]^2 = y[i]*f(i) - 1, so  
-    			# 1) if y[i]*E_i < 0, so yi*f(i) < 1, if alpha < C, violate!(alpha = C will be correct)   
-    			# 2) if y[i]*E_i > 0, so yi*f(i) > 1, if alpha > 0, violate!(alpha = 0 will be correct)  
-    			# 3) if y[i]*E_i = 0, so yi*f(i) = 1, it is on the boundary, needless optimized  
+    			# because y[i]*E_i = y[i]*f(i) - y[i]^2 = y[i]*f(i) - 1
 			toler = it.kkt_toler
 			C = it.slack
 			gs = ys*it.errs
-			no_bound_arg =np.argwhere((h.multiplier>0) & (h.multiplier<C)).reshape(-1)
+			condition = (h.multiplier>0) & (h.multiplier<C)
+			no_bound_arg =np.argwhere(condition).reshape(-1)
 			if len(no_bound_arg)>0:
 				no_bound_Mult = np.absolute(gs[no_bound_arg])-toler
 				relative_arg = np.argsort(no_bound_Mult)
@@ -118,12 +116,13 @@ class svm_smo_fc(train.factory):
 			y[i]*E_i <= toler alpha = C violate situation:gs>toler vio_va = gs-toler
 			so unify_vio_v = gs*(alpha/C*2-1)-t
 			'''
-			unify_vio = gs*(h.multiplier/C*2-1)-toler
+			bound_arg =np.argwhere(np.logical_not(condition)).reshape(-1)
+			unify_vio = gs[bound_arg]*(h.multiplier[bound_arg]*2.0/C-1)-toler
 			sortedArg = np.argsort(unify_vio)
 
 			for i_inx in sortedArg[::-1]:
 				if unify_vio[i_inx]>0:
-					mult_i = unify_vio[i_inx]
+					mult_i =bound_arg[i_inx]
 					ret = excutInLoop(it,mult_i)
 					if ret:
 						return ret
@@ -147,23 +146,24 @@ class svm_smo_fc(train.factory):
 			h.multiplier[i] = new_mult_i
 		 	h.multiplier[j] = new_mult_j
 		 	Kij = h.kernal(xs[j],xs[i])
-		 	b_i = h.b-it.errs[i]-ys[i]*h.kernal(xs[i],xs[i])-ys[j]*Kij
-		 	b_j = h.b-it.errs[j]-ys[i]*Kij-ys[j]*h.kernal(xs[j],xs[j])
-		 	if new_mult_i>0 and new_mult_i<C:
-		 		h.b = b_i
-		 	elif new_mult_i>0 and new_mult_i<C:
-		 		h.b = b_j
-		 	else:
-		 		h.b = (b_j+b_i)/2.0
+		 	b_i = h.b-it.errs[i]+ys[i]*h.kernal(xs[i],xs[i])*(old_mult_i-new_mult_i) + ys[j]*Kij*(old_mult_j-new_mult_j)
+		 	b_j = h.b-it.errs[i]+ys[i]*Kij*(old_mult_i-new_mult_i) + ys[j]*h.kernal(xs[j],xs[j])*(old_mult_j-new_mult_j)
+
+#		 	print "testb_i is %s" %(ys[i]-(h.excution(xs[i])-h.b))
+#		 	print "testb_j is %s" %(ys[j]-(h.excution(xs[j])-h.b))
+
+		 	if new_mult_i>0 and new_mult_i<C:	h.b = b_i
+		 	elif new_mult_i>0 and new_mult_i<C:	h.b = b_j
+		 	else:	h.b = (b_j+b_i)/2.0
+		 	
 		 	oldErrs = it.errs
 		 	newRes =np.apply_along_axis(lambda xin:h.excution(xin),1, arr=xs).reshape(-1)
 		 	it.errs = newRes - ys
-
 		 	print "chose alpha i:%s j:%s" %(i,j)
-		 	print "alpha is %s" %h.multiplier
-		 	print "b is %s"%h.b
-		 	print "errs is %s"%it.errs
-		 	print "delt errs is %s" %(it.errs-oldErrs)
-			print "alpha*y is %s" %(h.multiplier*ys).sum()
+		 	#print "alpha is %s" %h.multiplier
+		 	#print "b is %s"%h.b
+		 	#print "errs is %s"%it.errs
+		 	#print "delt errs is %s" %(it.errs-oldErrs)
+			#print "alpha*y is %s" %(h.multiplier*ys).sum()
 			return None
 		return excTraining
