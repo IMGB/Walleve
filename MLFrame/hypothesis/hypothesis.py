@@ -31,6 +31,10 @@ class hypothesis(object):
 
 	def checkXin(self,xin):
 		return True
+
+	def decorateOut(self,excout):
+		return excout
+
 	## important
 	##!! if xin.ndim > 1 i treat xin as mutiply xin and if xin.ndim = 1 we think xin a single vector in put 
 	def __call__(self,xin): 
@@ -42,7 +46,7 @@ class hypothesis(object):
 					raise HypInputError("not correct putin")
 			except Exception, e:
 				raise HypExcutionError("excution error")
-			return self.excution(xin)
+			return self.decorateOut(self.excution(xin))
 	
 	
 

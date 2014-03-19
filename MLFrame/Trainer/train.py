@@ -99,7 +99,7 @@ class factory(object):
 		yin = it.trainData.y
 		if it.costFunc: 	it.outDic['cost'] =  it.costFunc(yin,it.hyp(it.trainData.x))
 		it.outDic['hyp'] = it.hyp
-		if retExc: it.outDic.append(retExc)
+		if retExc: it.outDic.update(retExc)
 		if it.checkExc:	it.outDic['crossCost'] = it.costFunc(yin,it.hyp(it.checkData.x))
 		return it.outDic
 

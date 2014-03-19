@@ -2,12 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b31424fe-a0f3-4965-a3d2-fc8ef77346a3" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MLFrame/DataSet/DataSet.py" afterPath="$PROJECT_DIR$/MLFrame/DataSet/DataSet.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MLFrame/KNN/KNN.py" afterPath="$PROJECT_DIR$/MLFrame/KNN/KNN.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MLFrame/NeuralNetwork/NeuralNetwok.py" afterPath="$PROJECT_DIR$/MLFrame/NeuralNetwork/NeuralNetwok.py" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MLFrame/KNN/KNN_RBF.py" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MLFrame/PCA.py" afterPath="$PROJECT_DIR$/MLFrame/PCA.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MLFrame/customerFun.py" afterPath="$PROJECT_DIR$/MLFrame/customerFun.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/linearRegTest.py" afterPath="$PROJECT_DIR$/linearRegTest.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/neturalNetTest.py" afterPath="$PROJECT_DIR$/neturalNetTest.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MLFrame/hypothesis/hypothesis.py" afterPath="$PROJECT_DIR$/MLFrame/hypothesis/hypothesis.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MLFrame/Trainer/train.py" afterPath="$PROJECT_DIR$/MLFrame/Trainer/train.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Walleve.iws" />
@@ -31,19 +30,28 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="PCA_Test.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/PCA_Test.py">
+      <file leaf-file-name="train.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/MLFrame/Trainer/train.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="0" selection-start="216" selection-end="216" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="345">
+            <state line="48" column="0" selection-start="1259" selection-end="1259" vertical-scroll-proportion="0.0" vertical-offset="720" max-vertical-offset="2010">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PCA.py" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/MLFrame/PCA.py">
+      <file leaf-file-name="SVMTest.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/SVMTest.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="0" selection-start="271" selection-end="271" vertical-scroll-proportion="0.3324937" vertical-offset="18" max-vertical-offset="705">
+            <state line="39" column="0" selection-start="884" selection-end="884" vertical-scroll-proportion="0.0" vertical-offset="368" max-vertical-offset="750">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="svm.py" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/MLFrame/SVM/svm.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="102" column="36" selection-start="3808" selection-end="3808" vertical-scroll-proportion="0.13436124" vertical-offset="1469" max-vertical-offset="2595">
               <folding />
             </state>
           </provider>
@@ -67,7 +75,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/MLFrame/LinearRegression/LinerReg.py" />
         <option value="$PROJECT_DIR$/MLFrame/Trainer/gradDescTrainer.py" />
         <option value="$PROJECT_DIR$/linerRegTest.py" />
         <option value="$PROJECT_DIR$/MLFrame/LinearRegression/LinearReg.py" />
@@ -81,12 +88,15 @@
         <option value="$PROJECT_DIR$/MLFrame/NeuralNetwork/NeuralNetwok.py" />
         <option value="$PROJECT_DIR$/neturalNetTest.py" />
         <option value="$PROJECT_DIR$/MLFrame/customerFun.py" />
+        <option value="$PROJECT_DIR$/MLFrame/PCA.py" />
+        <option value="$PROJECT_DIR$/SVMTest.py" />
+        <option value="$PROJECT_DIR$/MLFrame/SVM/svm.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="292" />
-    <option name="y" value="28" />
+    <option name="x" value="198" />
+    <option name="y" value="22" />
     <option name="width" value="1440" />
     <option name="height" value="801" />
   </component>
@@ -116,7 +126,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -149,43 +158,44 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Walleve" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Walleve" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MLFrame" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SVM" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="options.splitter.main.proportions" value="0.3" />
+    <property name="options.lastSelected" value="preferences.sourceCode.Python" />
     <property name="recentsLimit" value="5" />
-    <property name="options.lastSelected" value="com.jetbrains.python.configuration.PythonSdkConfigurable" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="FullScreen" value="false" />
-    <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
+    <property name="options.splitter.details.proportions" value="0.2" />
   </component>
   <component name="PyConsoleOptionsProvider">
     <option name="myPythonConsoleState">
       <console-settings />
     </option>
   </component>
-  <component name="RunManager" selected="Python.PCA_Test">
-    <configuration default="false" name="ClusteringTest" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="Walleve" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/ClusteringTest.py" />
-      <option name="PARAMETERS" value="" />
-      <RunnerSettings RunnerId="PyDebugRunner" />
-      <ConfigurationWrapper RunnerId="PyDebugRunner" />
-      <method />
-    </configuration>
+  <component name="RunManager" selected="Python.SVMTest">
     <configuration default="false" name="neturalNetTest" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -253,6 +263,24 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="Walleve" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/PCA_Test.py" />
+      <option name="PARAMETERS" value="" />
+      <RunnerSettings RunnerId="PyDebugRunner" />
+      <ConfigurationWrapper RunnerId="PyDebugRunner" />
+      <method />
+    </configuration>
+    <configuration default="false" name="SVMTest" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="Walleve" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/SVMTest.py" />
       <option name="PARAMETERS" value="" />
       <RunnerSettings RunnerId="PyDebugRunner" />
       <ConfigurationWrapper RunnerId="PyDebugRunner" />
@@ -380,19 +408,19 @@
       <method />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Python.ClusteringTest" />
-      <item index="1" class="java.lang.String" itemvalue="Python.neturalNetTest" />
-      <item index="2" class="java.lang.String" itemvalue="Python.NaiveBayesTest" />
-      <item index="3" class="java.lang.String" itemvalue="Python.KNNTest" />
-      <item index="4" class="java.lang.String" itemvalue="Python.PCA_Test" />
+      <item index="0" class="java.lang.String" itemvalue="Python.neturalNetTest" />
+      <item index="1" class="java.lang.String" itemvalue="Python.NaiveBayesTest" />
+      <item index="2" class="java.lang.String" itemvalue="Python.KNNTest" />
+      <item index="3" class="java.lang.String" itemvalue="Python.PCA_Test" />
+      <item index="4" class="java.lang.String" itemvalue="Python.SVMTest" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.PCA_Test" />
-        <item index="1" class="java.lang.String" itemvalue="Python.KNNTest" />
-        <item index="2" class="java.lang.String" itemvalue="Python.neturalNetTest" />
-        <item index="3" class="java.lang.String" itemvalue="Python.NaiveBayesTest" />
-        <item index="4" class="java.lang.String" itemvalue="Python.ClusteringTest" />
+        <item index="0" class="java.lang.String" itemvalue="Python.SVMTest" />
+        <item index="1" class="java.lang.String" itemvalue="Python.PCA_Test" />
+        <item index="2" class="java.lang.String" itemvalue="Python.KNNTest" />
+        <item index="3" class="java.lang.String" itemvalue="Python.neturalNetTest" />
+        <item index="4" class="java.lang.String" itemvalue="Python.NaiveBayesTest" />
       </list>
     </recent_temporary>
   </component>
@@ -406,15 +434,15 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="292" y="28" width="1440" height="801" extended-state="0" />
-    <editor active="false" />
+    <frame x="198" y="22" width="1440" height="801" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25" sideWeight="0.601983" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.398017" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20763889" sideWeight="0.6827195" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.31728044" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3295711" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -466,41 +494,22 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="python-line">
           <url>file://$PROJECT_DIR$/MLFrame/PCA.py</url>
-          <line>10</line>
+          <line>9</line>
           <option name="timeStamp" value="93" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="python-line">
+          <url>file://$PROJECT_DIR$/MLFrame/SVM/svm.py</url>
+          <line>101</line>
+          <option name="timeStamp" value="133" />
         </line-breakpoint>
       </breakpoints>
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="94" />
+      <option name="time" value="134" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/MLFrame/Clustering/clustering.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="37" column="0" selection-start="1209" selection-end="1209" vertical-scroll-proportion="0.17256637" vertical-offset="438" max-vertical-offset="1350">
-          <folding>
-            <element signature="e#0#30#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MLFrame/LinearRegression/LinearReg.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="0" selection-start="649" selection-end="649" vertical-scroll-proportion="0.15929204" vertical-offset="267" max-vertical-offset="945" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../sciEnvForPy2/lib/python2.7/site-packages/numpy/lib/shape_base.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="78" column="0" selection-start="2586" selection-end="2586" vertical-scroll-proportion="0.24778761" vertical-offset="1002" max-vertical-offset="12600" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MLFrame/Bayes/BayesModule.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="4" selection-start="435" selection-end="435" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="645" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/MLFrame/Bayes/NaiveBayes.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="45" column="0" selection-start="1168" selection-end="1168" vertical-scroll-proportion="0.6138614" vertical-offset="350" max-vertical-offset="855" />
@@ -520,16 +529,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="25" column="0" selection-start="636" selection-end="636" vertical-scroll-proportion="0.39823008" vertical-offset="105" max-vertical-offset="1230">
           <folding>
-            <element signature="e#0#30#0" expanded="true" />
+            <element signature="e#0#30#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/KNNTest.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="26" selection-start="413" selection-end="413" vertical-scroll-proportion="0.3318584" vertical-offset="0" max-vertical-offset="678">
-          <folding />
-        </state>
+        <state line="15" column="26" selection-start="413" selection-end="413" vertical-scroll-proportion="0.3318584" vertical-offset="0" max-vertical-offset="678" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/MLFrame/customerFun.py">
@@ -541,42 +548,58 @@
     </entry>
     <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/pydevd.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1142" column="0" selection-start="47510" selection-end="47510" vertical-scroll-proportion="0.0" vertical-offset="15972" max-vertical-offset="22080">
-          <folding />
-        </state>
+        <state line="1142" column="0" selection-start="47510" selection-end="47510" vertical-scroll-proportion="0.0" vertical-offset="15972" max-vertical-offset="22080" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/MLFrame/NeuralNetwork/NeuralNetwok.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="42" column="0" selection-start="1134" selection-end="1134" vertical-scroll-proportion="0.41297936" vertical-offset="350" max-vertical-offset="1395">
-          <folding />
-        </state>
+        <state line="42" column="0" selection-start="1134" selection-end="1134" vertical-scroll-proportion="0.41297936" vertical-offset="350" max-vertical-offset="1395" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../sciEnvForPy2/lib/python2.7/site-packages/numpy/core/_methods.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="0" selection-start="790" selection-end="790" vertical-scroll-proportion="0.0" vertical-offset="87" max-vertical-offset="1845">
-          <folding />
-        </state>
+        <state line="24" column="0" selection-start="790" selection-end="790" vertical-scroll-proportion="0.0" vertical-offset="87" max-vertical-offset="1845" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/neturalNetTest.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="55" column="31" selection-start="1537" selection-end="1537" vertical-scroll-proportion="0.6902655" vertical-offset="342" max-vertical-offset="1020">
+        <state line="55" column="31" selection-start="1537" selection-end="1537" vertical-scroll-proportion="0.6902655" vertical-offset="342" max-vertical-offset="1020" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MLFrame/PCA.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="19" selection-start="509" selection-end="509" vertical-scroll-proportion="0.3141593" vertical-offset="12" max-vertical-offset="735">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/PCA_Test.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="0" selection-start="216" selection-end="216" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="345">
+        <state line="19" column="0" selection-start="310" selection-end="310" vertical-scroll-proportion="0.42035398" vertical-offset="0" max-vertical-offset="678" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MLFrame/Trainer/train.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="48" column="0" selection-start="1259" selection-end="1259" vertical-scroll-proportion="0.0" vertical-offset="573" max-vertical-offset="1995">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/MLFrame/PCA.py">
+    <entry file="file://$PROJECT_DIR$/../sciEnvForPy2/lib/python2.7/site-packages/numpy/lib/shape_base.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="0" selection-start="271" selection-end="271" vertical-scroll-proportion="0.3324937" vertical-offset="18" max-vertical-offset="705">
+        <state line="94" column="0" selection-start="3125" selection-end="3125" vertical-scroll-proportion="0.1813602" vertical-offset="1338" max-vertical-offset="12600" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SVMTest.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="39" column="0" selection-start="884" selection-end="884" vertical-scroll-proportion="0.0" vertical-offset="368" max-vertical-offset="750">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MLFrame/SVM/svm.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="102" column="36" selection-start="3808" selection-end="3808" vertical-scroll-proportion="0.13436124" vertical-offset="1469" max-vertical-offset="2595">
           <folding />
         </state>
       </provider>

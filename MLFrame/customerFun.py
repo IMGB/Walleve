@@ -19,3 +19,11 @@ def calDistance(vectorA,vectorB):
 
 def diffFun(A,B):
 	return A==B
+
+def sgn(xin):
+	if xin >0:
+		return 1
+	elif xin <0:
+		return -1
+	else :
+		return 0

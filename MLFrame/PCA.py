@@ -23,7 +23,7 @@ def pca_k(xin,k):
 	eigVals,eigVects,mean,scal_factor = pca_data(xin)
 	eigArg =  eigVals.argsort()
 	basis_vector_index  = eigArg[::-1][:k]
-	basis_vector = eigVects[basis_vector_index]
+	basis_vector = eigVects[basis_vector_index]SVM
 	return produceXMap(mean, scal_factor, basis_vector)
 
 def pca_auto(xin,varaint_loss):
